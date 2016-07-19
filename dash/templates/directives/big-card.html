@@ -1,0 +1,17 @@
+<alert-box  cancel="directive.modalKey"
+			submit="modal"
+			ng-if="directive.modalKey"></alert-box>
+
+
+<div class="card col-md-12">
+	<div class="editElements col-md-2 pull-right">
+		<i ng-click="directive.edit()" class="fa fa-pencil linkble"></i>
+		<i ng-click="directive.modal()" class="fa fa-times linkble"></i>
+	</div>
+	<div class="post col-md-10">
+		<h3 class="post-header">{{title}}</h3>
+		<span class="status">{{published}}</span>
+		<hr />
+		<div class="content" ng-bind-html="content"></div>
+	</div>
+</div>

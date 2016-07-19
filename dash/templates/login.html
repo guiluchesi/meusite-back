@@ -1,0 +1,19 @@
+<div id="login" class="container-fluid" ng-controller="loginCtrl">
+	<div class="col-md-4 col-md-offset-4">
+		<div class="erro" ng-if="error">
+			{{error}}
+		</div>
+		<form class="formfield" ng-submit="submit()">
+			<div class="form-group">
+				<label for="user">Usuário</label>
+				<input ng-model="models.user" type="text" id="user" required/>
+			</div>
+			<div class="form-group">
+				<label for="pw">Senha</label>
+				<input ng-model="models.pw" type="password" id="pw" required/>
+			</div>
+			<button class="btn">LOGIN</button>
+		</form>
+		<a href="http://localhost:8181" class="cadastrar">Voltar ao site</a>
+	</div>
+</div>

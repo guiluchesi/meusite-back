@@ -1,0 +1,168 @@
+$darkBlue: #0289cb
+$lightBlue: #10befd
+$gray: #f8f8f8
+=bluebg
+	background: $lightBlue
+	background: -moz-linear-gradient(45deg,  $lightBlue 0%, $darkBlue 100%)
+	background: -webkit-linear-gradient(45deg,  $lightBlue 0%, $darkBlue 100%)
+	background: linear-gradient(45deg,  $lightBlue 0%, $darkBlue 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$darkBlue', endColorstr='$lightBlue',GradientType=1 )
+=boxshadow
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.2)
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2)
+	box-shadow: 0 0 5px rgba(0,0,0,0.2)
+body
+	margin: 0
+	padding: 0
+
+img
+	width: 100%
+
+a, a:hover, a:focus, a:active
+	text-decoration: none
+	color: $darkBlue
+
+.btn, input, textarea
+	&:hover, &:focus, &:active
+		outline: 0
+
+#header
+	+bluebg
+	padding: 20px
+	color: #fff
+	a
+		color: #fff
+	.logo
+		width: 300px
+		@media (max-width: 600px)
+			margin-bottom: 30px
+		img
+			width: auto
+			height: 60px
+	.login
+		.profilePic
+			width: 15%
+			padding: 0
+			margin: 0 12px 0 15px
+		ul
+			border-right: 4px
+			background-color: #fdfdfd
+			padding: 10px
+			width: 290px
+			a
+				color: #3B3B3B
+
+.voltar
+	font-size: 20px
+
+.cta
+	background-color: #ff9800
+	color: #fff
+	&:hover, &:visited, &:active
+		color: #fff
+
+.linkble
+	cursor: pointer
+
+#home
+	.profilePic
+		border-radius: 50%
+		overflow: hidden
+		padding: 0
+	.homeList
+		font-size: 16px
+		margin: 25px 0
+		li
+			a
+				padding: 5px 0
+				margin: 15px 0
+				&:hover, &:focus, &:visited
+					background-color: inherit
+
+#body
+	padding: 100px 0
+	.shadow
+		position: absolute
+		width: 190%
+		height: 1200px
+		top: -270px
+		left: -45%
+		background-color: rgba(0,0,0,0.5)
+		z-index: 2
+	.alertbox
+		position: absolute
+		background-color: $gray
+		border-radius: 5px
+		padding: 0 0 15px
+		z-index: 2
+		+boxshadow
+		header
+			+bluebg
+			border-top-left-radius: 5px
+			border-top-right-radius: 5px
+			padding: 7px 15px
+			color: #fff
+			font-weight: bold
+			.fa-times
+				margin-top: 3px
+		main
+			padding: 15px 0
+			border-bottom: 1px solid #eee
+			margin: 0 15px 15px
+		footer
+			margin: 0 12px
+			.btn
+				margin: 0 3px
+				font-weight: bold
+	.card
+		padding: 0 0 10px 10px
+		margin: 20px 0 20px
+		background-color: $gray
+		color: #454545
+		+boxshadow
+		.content
+			margin-bottom: 15px
+		span
+			&.status
+				font-style: italic
+				font-size: 12px
+		.editElements
+			margin-top: 25px
+			text-align: right
+			font-size: 18px
+			z-index: 1
+			i
+				margin: 0 8px
+				&.fa-times
+					color: #f00
+	.form
+		textarea
+			width: 100%
+			height: 300px
+			margin: 10px 0 30px
+			padding: 3px 8px
+			resize: none
+			border: none
+			border-left: 1px solid #c7c7c7
+			border-bottom: 1px solid #c7c7c7
+		input
+			width: 100%
+			height: 30px
+			border: none
+			border-bottom: 1px solid #c7c7c7
+			margin-bottom: 30px
+			&[type="file"]
+				border: none
+	.post
+		padding-top: 1px
+		.form
+			margin: 30px 0 20px
+			input, textarea
+				background-color: inherit
+				&[type="radio"]
+					width: auto
+					position: relative
+					top: 8px
+					margin: -10px 10px 30px 30px
+					&:first-child
+						margin-left: 0

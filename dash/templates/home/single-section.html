@@ -1,0 +1,20 @@
+<div id="home">
+	<dash-header></dash-header>
+	<section class="container-fluid" id="body">
+		<div class="container">
+			<main>
+				<div class="col-md-8 col-md-offset-2" ng-controller="singleSectionCtrl as section">
+					<a href="#/home/" class="voltar">Voltar</a>
+					<h3 ng-if="section.error" style="margin-top: 50px">{{section.error}}</h3>
+					
+
+					<big-card title="section.data.section"
+							  content="section.data.content"
+							  modal="section.modalFunc"
+							  ng-if="section.data">
+					</big-card>
+				</div>
+			</main>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "my-site",
+  "version": "1.0.0",
+  "description": "Guilherme Luchesi's site",
+  "author": "Guilherme <gui.olhenrique@gmail.com>",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "bower": "^1.7.9",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "mongoose": "^4.5.4"
+  },
+  "scripts": {
+    "start": "node server/app.js",
+    "install": "npm install"
+  }
+}

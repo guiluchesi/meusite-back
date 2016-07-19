@@ -1,0 +1,21 @@
+<div class="card col-md-12">
+	<div class="editElements col-md-2 pull-right">
+		<i ng-click="directive.cancel()" class="fa fa-times linkble"></i>
+	</div>
+	<div class="post col-md-10">
+		<form class="form">
+			<label for="title">Título</label>
+			<input type="text" name="title" ng-model="title">
+
+			<div ng-if="published">
+				<input type="radio" ng-model="published" name="published" value="Publicado"> Publicado
+				<input type="radio" ng-model="published" name="published" value="Rascunho"> Rascunho
+			</div>
+
+			<label for="title">Conteúdo</label>
+			<textarea name="post-content" ng-model="content"></textarea>
+
+			<button class="btn cta" ng-click="submit()">ENVIAR</button>
+		</form>
+	</div>
+</div>

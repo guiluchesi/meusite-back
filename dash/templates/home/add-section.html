@@ -1,0 +1,17 @@
+<div id="home">
+	<dash-header></dash-header>
+	<div class="container-fluid" id="body">
+		<div class="container">
+			<main>
+				<div class="col-md-8 col-md-offset-2" ng-controller="addSectionCtrl as sec">
+					<a href="#/home/" class="voltar">Voltar</a>
+
+					<form-card  title="sec.models.section"
+								content="sec.models.content"
+								submit="sec.add">
+					</form-card>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<div id="home">
+	<dash-header></dash-header>
+	<div class="container-fluid" id="body">
+		<div class="container">
+			<main>
+				<div class="avatar profilePic col-md-4 col-md-offset-1" ng-if="!mobile">
+					<img ng-src="{{user.profileImg}}" alt="">
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<h1>Bem vindo {{user.name}}.</h1>
+					<ul class="nav nav-pills homeList">
+						<li>
+							<a href="http://localhost:8181/" target="_blank">Acessar o site</a>
+							<a href="#/home">Editar página inicial</a>
+							<a href="#/posts">Meus posts</a>
+							<a href="#/perfil">Meu perfil</a>
+						</li>
+					</ul>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>

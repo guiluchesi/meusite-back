@@ -1,0 +1,191 @@
+$darkBlue: #0289cb
+$lightBlue: #10befd
+=bluebg
+	background: $lightBlue
+	background: -moz-linear-gradient(45deg,  $lightBlue 0%, $darkBlue 100%)
+	background: -webkit-linear-gradient(45deg,  $lightBlue 0%, $darkBlue 100%)
+	background: linear-gradient(45deg,  $lightBlue 0%, $darkBlue 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$darkBlue', endColorstr='$lightBlue',GradientType=1 )
+
+=shadow
+	fill: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(125,185,232,0) 100%)
+	fill: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%)
+	fill: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(125,185,232,0) 100%)
+
+=rotate($val)
+	transform: rotate($val)
+	webkit-transform: rotate($val)
+	moz-transform: rotate($val)
+
+$gray: #2B2F38
+
+.btn, input, textarea
+	&:hover, &:focus, &:active
+		outline: 0
+
+body
+	background-color: #fbfbfb
+	font-family: 'Lato', sans-serif
+	font-size: 18px
+	height: 100%
+
+img
+	width: 100%
+
+.bg-blue
+	+bluebg
+	color: #444
+
+.bg-gray
+	background-color: $gray
+	color: #fff
+
+.darkBlue
+	fill: $darkBlue
+
+.lightBlue
+	fill: $lightBlue
+
+.shadow
+	+shadow
+
+.header
+	margin: 170px 0
+	h1
+		text-align: center
+		text-transform: uppercase
+		font-weight: 900
+		font-size: 30px
+		color: #fff
+		margin-top: 40px
+
+#servicos
+	margin: 90px 0
+	text-align: center
+	h2
+		text-transform: uppercase
+		font-weight: 900
+		margin-top: 40px
+
+#resumo, #edai, #novoMelhor, #casaArrumada, #target
+	margin: 80px 0
+
+#ireland, #harry
+	margin: 90px 0 0 0
+	@media (max-width: 600px)
+		margin: 50px 0 0 0
+	figure
+		position: relative
+		top: 6px
+
+#resumo
+	.badges
+		@media (min-width: 992px) and (max-width: 1199px)
+			margin-top: 70px
+		@media (max-width: 991px)
+			width: 50%
+			margin-left: 25%
+	.about
+		h2
+			margin: 0 0 30px 0
+		padding: 0 30px
+		@media (max-width: 991px)
+			padding: 50px 0
+
+.habilidades
+	padding: 0
+	margin: 0
+	li
+		display: inline-block
+		&:first-child, &:nth-child(4)
+			margin-left: 0
+		&:last-child, &:nth-child(3)
+			margin-right: 0
+		@media (min-width: 992px)
+			&:nth-child(-n+3)
+				margin-bottom: 20px
+			&:nth-child(n+4)
+				margin-top: 20px
+		@media (min-width: 768px) and (max-width: 991px)
+			&:nth-child(-n+3)
+				margin-top: 12px
+		@media (max-width: 767px)
+			&:nth-child(-n+3)
+				margin-bottom: 20px
+			&:nth-child(n+4)
+				margin-top: 20px
+
+#edai
+	.lead
+		font-weight: 900
+
+.modal
+	margin-top: 150px
+	.smallFields
+		width: 50%
+		float: left
+		@media (max-width: 450px)
+			width: 100%
+		label
+			margin: 0 3px 10px 0
+			width: 60px
+		input
+			@media (max-width: 450px)
+				width: 80%
+			border: none
+			border-bottom: 1px solid #c7c7c7
+	.bigFields
+		label
+			margin-top: 7px
+		textarea
+			width: 100%
+			height: 150px
+			resize: none
+			border: none
+			border-bottom: 1px solid #c7c7c7
+			border-left: 1px solid #c7c7c7
+			margin-top: 5px
+			padding: 8px
+
+.modal-header, .modal-footer
+	border: none
+
+.btn-form
+	text-transform: uppercase
+	background-color: #EFC820
+	color: #fff
+	border-bottom: 3px solid rgb(255, 208, 4)
+	&:hover, &:focus
+		color: #fff
+		background-color: #FABE20
+		outline: 0
+	&:focus
+		border-bottom: none
+		position: relative
+		top: 3px		
+
+#harry
+	p.balao
+		background-color: #2b2f38
+		color: #b4e9fc
+		width: 75%
+		padding: 10px 20px
+		border-radius: 10px
+		font-size: 20px
+		@media (max-width: 509px)
+			width: 100%
+		&:before
+			content: ''
+			position: absolute
+			border: 0 solid transparent
+			border-top: 10px solid #2b2f38
+			border-radius: 0 20px 0 0
+			top: 70px
+			left: 22px
+			width: 22px
+			height: 17px
+			+rotate(90deg)
+			@media (max-width: 509px)
+				display: none
+	p:nth-child(2)
+		margin-top: 35px

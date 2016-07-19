@@ -1,0 +1,20 @@
+<div id="home">
+	<dash-header></dash-header>
+	<section class="container-fluid" id="body">
+		<div class="container">
+			<main>
+				<div class="col-md-8 col-md-offset-2" ng-controller="singlePostCtrl as post">
+					<a href="#/posts/" class="voltar">Voltar</a>
+					<h3 ng-if="post.error" style="margin-top: 50px">{{post.error}}</h3>
+					
+					<big-card title="post.data.title"
+							  content="post.data.content"
+							  published="post.data.published"
+							  modal = "post.modalFunc"
+							  ng-if="post.data">		  
+					</big-card>
+				</div>
+			</main>
+		</div>
+	</section>
+</div>

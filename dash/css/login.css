@@ -1,0 +1,41 @@
+#login {
+  background: #10befd;
+  background: -moz-linear-gradient(45deg, #10befd 0%, #0289cb 100%);
+  background: -webkit-linear-gradient(45deg, #10befd 0%, #0289cb 100%);
+  background: linear-gradient(45deg, #10befd 0%, #0289cb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$darkBlue', endColorstr='$lightBlue',GradientType=1 );
+  padding: 270px 0; }
+  @media (max-width: 450px) {
+    #login {
+      padding: 230px 0; } }
+  #login input, #login label {
+    width: 100%; }
+  #login input {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #000;
+    height: 30px; }
+    #login input:focus {
+      outline: none; }
+  #login .formfield {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px; }
+  #login .btn {
+    background-color: #ff9800;
+    color: #fff;
+    font-weight: 700; }
+  #login .cadastrar {
+    float: right;
+    margin: -55px 32px 0 0;
+    color: #424242;
+    text-decoration: none; }
+  #login .erro {
+    background-color: #F44336;
+    color: #fff;
+    padding: 12px 20px;
+    margin: -50px 0 20px 0;
+    border-radius: 5px; }
+
+/*# sourceMappingURL=login.css.map */

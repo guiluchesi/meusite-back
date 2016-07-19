@@ -1,0 +1,20 @@
+<div id="home">
+	<dash-header></dash-header>
+	<div class="container-fluid" id="body">
+		<div class="container">
+			<main>
+				<div class="col-md-8 col-md-offset-2" ng-controller="listPageCtrl as home">
+					<a href="#/" class="voltar">Voltar</a>
+					<button class="btn cta pull-right" ng-click="home.add()">Adicionar Sessão</button>
+					<h3 ng-if="home.error" style="margin-top: 50px">{{home.error}}</h3>
+
+					<small-card title="section.title"
+								sub="section.content | cut: true: 100"
+								page="home"
+								ng-repeat="section in home.sections">
+					</small-card>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>

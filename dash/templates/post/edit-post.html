@@ -1,0 +1,20 @@
+<div id="home">
+	<dash-header></dash-header>
+	<div class="container-fluid" id="body">
+		<div class="container">
+			<main>
+				<div class="col-md-8 col-md-offset-2" ng-controller="editPostCtrl as post">
+					<a ng-href="{{post.path}}" class="voltar">Voltar</a>
+					<h3 ng-if="post.error" style="margin-top: 50px">{{post.error}}</h3>
+
+					<form-card  title="post.models.title"
+								published="post.models.published"
+								content="post.models.content"
+								submit="post.edit"
+								ng-hide="post.error">
+					</form-card>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>

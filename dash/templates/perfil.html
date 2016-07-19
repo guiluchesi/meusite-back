@@ -1,0 +1,31 @@
+<div id="home">
+	<dash-header></dash-header>
+	<div class="container-fluid" id="body">
+		<div class="container">
+			<main>
+				<div class="avatar profilePic col-md-4 col-md-offset-1" ng-if="!mobile">
+					<img ng-src="{{user.profileImg}}" alt="">
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<a href="#/" class="voltar">Voltar</a>
+					<h1>Perfil de {{user.name}}.</h1>
+					<form ng-submit="update()" class="form">
+						<label for="nome">Nome</label>
+						<input type="text" id="nome" ng-model="user.name" />
+
+						<label for="user">Usuário</label>
+						<input type="text" id="user" ng-model="user.user" />
+
+						<label for="pw">Senha</label>
+						<input type="password" id="pw" ng-model="user.pw" />
+
+						<label for="pic">Imagem de perfil</label>
+						<input type="file" id="pic" ng-model="user.profileImg" />
+						
+						<button type="submit" class="btn pull-right cta">Atualizar</button>
+					</form>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>
