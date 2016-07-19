@@ -19,9 +19,12 @@ router.route('/login')
     var user = req.body,
         query = {'user': user.user, 'pw': user.pw};
 
-    _user.find(query, (err, users) => {
+    _user.findOne(query, (err, user0) => {
       if (err) return res.status(400).send(err);
-      users.length === 0 ? res.status(400).send('Usuário ou senha incorreto.') : res.status(200).send(users[0]);
+			if (!user0) return res.status(400).send('Usuário ou senha incorreto.');
+			usuario = user0.toObject();
+			delete usuario.pw;
+			res.status(200).send(usuario);
     });
 
 });
