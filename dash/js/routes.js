@@ -8,7 +8,7 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 		"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			},
 		templateUrl: 'templates/login.html'
 	})
@@ -17,7 +17,7 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 			"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			}
 		},
 		templateUrl: 'templates/dash.html',
@@ -32,7 +32,7 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 			"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			}
 		},
 		templateUrl: 'templates/perfil.html',
@@ -47,7 +47,7 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 			"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			}
 		},
 		templateUrl: 'templates/home/page.html'
@@ -57,7 +57,7 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 			"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			}
 		},
 		templateUrl: function(params) {
@@ -71,7 +71,7 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 			"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			}
 		},
 		templateUrl: 'templates/home/edit-section.html'
@@ -81,7 +81,7 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 			"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			}
 		},
 		templateUrl: 'templates/post/posts.html'
@@ -91,7 +91,7 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 			"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			}
 		},
 		templateUrl: function(params) {
@@ -105,10 +105,20 @@ angular.module('Dashboard', ['ngRoute', 'ngCookies'])
 			"check": function($location, $cookieStore){
 				if(!$cookieStore.get('user')){
 					$location.path('/login');
-				} 
+				}
 			}
 		},
 		templateUrl: "templates/post/edit-post.html"
+	})
+	.when('/face', {
+		resolve: {
+			"check": function($location, $cookieStore){
+				if(!$cookieStore.get('user')){
+					$location.path('/login');
+				}
+			}
+		},
+		templateUrl: 'templates/face/index.html'
 	})
 	.otherwise({redirectTo: '/'});
 });

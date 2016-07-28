@@ -8,8 +8,8 @@ var express 		= require("express"),
 
 mongoose.connect();
 
-app.use(bodyParser.urlencoded({ extended: false })); // for parsing application/x-www-form-urlencoded
-// app.use(bodyParser.json()); // for parsing application/json
+// app.use(bodyParser.urlencoded({ extended: false })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.json()); // for parsing application/json
 app.use(express.static(__dirname + '/..'));
 
 app.listen(8181, () => console.log('Listening on port 8181.'));

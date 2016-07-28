@@ -6,7 +6,6 @@ angular.module('Dashboard')
 
 	$http.get('/posts/'+slug)
 	.success((data) => {
-		delete data._id;
 		this.models = data;
 	})
 	.error((error) => {

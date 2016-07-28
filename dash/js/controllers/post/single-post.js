@@ -6,6 +6,7 @@ angular.module('Dashboard')
 
 	$http.get('/posts/' + slug)
 	.success((post) => {
+		console.log(post);
 		post.content = StringTools.toHtml(post.content);
 		return this.data = post;
 	})
